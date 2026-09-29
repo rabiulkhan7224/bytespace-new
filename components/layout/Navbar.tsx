@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { NAV_LINKS } from "@/content/nav";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { NAV_LINKS } from "@/content/nav";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,7 +106,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link
-              href="/signup"
+              href="/register"
               onClick={() => setIsOpen(false)}
               className="text-label-m flex-1 rounded-full bg-secondary-400 px-5 py-2 text-center font-medium text-neutral-950"
             >

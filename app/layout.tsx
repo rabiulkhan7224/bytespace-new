@@ -1,11 +1,8 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import Navbar from "./../components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 // Setup Poppins from Google Fonts
 const poppins = Poppins({
   subsets: ["latin"],
