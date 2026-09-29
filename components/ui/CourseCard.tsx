@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Star, BarChart3 } from "lucide-react";
 import type { Course } from "@/content/courses";
+import { Button } from "./button";
 
 type CourseCardProps = {
   course: Course;
@@ -20,20 +21,27 @@ export function CourseCard({ course }: CourseCardProps) {
         />
 
         {/* Stat overlay */}
-        <div className="absolute inset-x-3 bottom-3 flex items-center gap-2 rounded-full bg-neutral-950/60 px-3 py-1.5 backdrop-blur-sm">
-          <span className="text-body-xs text-white">
+        <div className="absolute inset-x-3 bottom-3 flex items-center gap-2 rounded-full  px-3 py-1.5 ">
+          <Button
+            variant={"ghost"}
+            className="text-body-xs rounded-full text-white backdrop-blur-sm bg-white/30"
+          >
             {course.lessons} Lessons
-          </span>
-          <span aria-hidden className="text-white/40">
-            ·
-          </span>
-          <span className="text-body-xs text-white">{course.duration}</span>
-          <span aria-hidden className="text-white/40">
-            ·
-          </span>
-          <span className="text-body-xs text-white">
-            {course.comments} Comments
-          </span>
+          </Button>
+
+          <Button
+            variant={"ghost"}
+            className="text-body-xs rounded-full text-white backdrop-blur-sm bg-white/30"
+          >
+            {course.duration}
+          </Button>
+
+          <Button
+            variant={"ghost"}
+            className="text-body-xs rounded-full px-2.5 text-white backdrop-blur-sm bg-white/30"
+          >
+            {course.comments}
+          </Button>
         </div>
       </div>
 
@@ -79,7 +87,7 @@ export function CourseCard({ course }: CourseCardProps) {
         </div>
 
         <div className="mt-4 flex items-baseline gap-1.5 border-t border-neutral-100 pt-3">
-          <span className="text-heading-xs text-neutral-950">
+          <span className="text-heading-xs text-primary-800">
             ${course.price}
           </span>
           <span className="text-body-xs text-neutral-500">
