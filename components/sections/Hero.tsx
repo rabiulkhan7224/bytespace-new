@@ -87,7 +87,7 @@ export function Hero() {
         <Image
           src="/images/man-hero.png"
           alt=""
-          width={560}
+          width={580}
           height={720}
           priority
           sizes="(min-width: 1024px) 520px, 420px"
