@@ -33,6 +33,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: "ByteSpace",
   description: "ByteSpace — modern software, built for teams.",
+  icons: "/logo.png",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
