@@ -31,7 +31,7 @@ export default function CourseDetailPage() {
           aria-hidden
           className="hero-grid pointer-events-none absolute inset-0"
         />
-        <div className="relative mx-auto max-w-7xl px-6 py-10 lg:py-18">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-18">
           <div className="lg:mr-[420px]">
             <CourseHero course={course} />
           </div>
