@@ -4,6 +4,7 @@ import { Partners } from "@/components/sections/partner";
 import { Features } from "./../components/sections/Features";
 import { CreatorCta } from "./../components/sections/CreatorCta";
 import { Testimonials } from "./../components/sections/Testimonials";
+import { Categories } from "./../components/sections/Categories";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Partners />
         <HomeCourses />
+        <Categories />
         <Features />
         <CreatorCta />
         <Testimonials />
