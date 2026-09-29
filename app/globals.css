@@ -203,6 +203,12 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+@utility hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.08) 2px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.08) 1.5px, transparent 1px);
+  background-size: 120px 120px;
+}
 
 @layer base {
   * {

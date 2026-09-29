@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-primary">
+    <header className="absolute inset-x-0 top-0 z-50 ">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
         <Link href="/" aria-label="ByteSpace home">
           <Image

@@ -1,101 +1,173 @@
-export default function Hero() {
+import Image from "next/image";
+import { Star } from "lucide-react";
+import { HeroSearch } from "./HeroSearch";
+import { HeroInfoCard } from "./HeroInfoCard";
+import { HERO } from "@/content/hero";
+
+const AVATARS = [
+  "/images/avatars/a1.png",
+  "/images/avatars/a2.png",
+  "/images/avatars/a3.png",
+  "/images/avatars/a4.png",
+  "/images/avatars/a5.png",
+  "/images/avatars/a6.png",
+];
+
+export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[720px] overflow-hidden bg-[#1239d8]"
+      aria-labelledby="hero-heading"
+      className="relative isolate overflow-hidden bg-primary-700 pt-32 lg:pt-44"
     >
-      {/* Decorative shapes */}
-      <div className="absolute left-[-40px] top-32 h-28 w-28 rotate-12 rounded-[30px] bg-lime-300 opacity-90" />
+      {/* Grid overlay */}
+      <div
+        aria-hidden
+        className="hero-grid pointer-events-none absolute inset-0"
+      />
 
-      <div className="absolute right-[-30px] top-28 h-32 w-32 rotate-45 rounded-[35px] bg-lime-300 opacity-90" />
+      {/* Lime circle — clipped by the section bottom */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-1/2 hidden h-[880px] w-[880px] -translate-x-1/2 translate-y-[55%] rounded-full bg-secondary-400 md:block"
+      />
 
-      <div className="absolute bottom-20 left-[8%] h-20 w-20 rotate-12 rounded-full border-[18px] border-white/90" />
+      {/* Decorative assets */}
+      <Image
+        aria-hidden
+        src="/images/spring-lime.png"
+        alt=""
+        width={300}
+        height={180}
+        className="pointer-events-none absolute left-[0%] top-[20%] hidden w-[300px] lg:block"
+      />
+      <Image
+        aria-hidden
+        src="/images/spring-white.png"
+        alt=""
+        width={180}
+        height={180}
+        className="pointer-events-none absolute left-[13%] top-[52%] hidden w-[120px] lg:block"
+      />
+      <Image
+        aria-hidden
+        src="/images/ring-white.png"
+        alt=""
+        width={340}
+        height={240}
+        className="pointer-events-none absolute left-[5%] top-[74%] hidden w-[300px] lg:block"
+      />
+      <Image
+        aria-hidden
+        src="/images/box-cone.png"
+        alt=""
+        width={300}
+        height={160}
+        className="pointer-events-none absolute right-[0%] top-[15%] hidden w-[200px] lg:block"
+      />
+      <Image
+        aria-hidden
+        src="/images/Cone-white.png"
+        alt=""
+        width={200}
+        height={200}
+        className="pointer-events-none absolute right-[8%] top-[48%] hidden w-[180px] lg:block"
+      />
+      <Image
+        aria-hidden
+        src="/images/spring-white.png"
+        alt=""
+        width={300}
+        height={200}
+        className="pointer-events-none absolute right-[7%] top-[76%] hidden w-[300px] lg:block"
+      />
 
-      <div className="absolute right-[10%] top-[45%] h-24 w-24 rounded-[25px] bg-pink-500/90 rotate-12" />
-
-      {/* Main Content */}
-      <div className="relative z-10 mx-auto flex min-h-[720px] max-w-7xl items-center px-6 pt-28 lg:px-10">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2">
-          {/* Left Content */}
-          <div className="max-w-2xl">
-            <div className="mb-6 inline-flex rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-lime-300">
-                Learn. Build. Grow.
-              </span>
-            </div>
-
-            <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Get Access to <span className="text-lime-300">Hundreds</span> of
-              Courses Available
-            </h1>
-
-            <p className="mt-6 max-w-xl text-base leading-7 text-blue-100 sm:text-lg">
-              Discover practical courses, learn from experienced creators, build
-              valuable skills, and take the next step in your professional
-              journey.
-            </p>
-
-            {/* Search */}
-            <div className="mt-8 flex max-w-xl flex-col gap-3 rounded-2xl bg-white p-2 shadow-2xl sm:flex-row">
-              <input
-                type="text"
-                placeholder="What do you want to learn?"
-                className="min-w-0 flex-1 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400"
-              />
-
-              <button className="rounded-xl bg-lime-300 px-7 py-3 text-sm font-bold text-slate-950 transition hover:bg-lime-200">
-                Find Course
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="mt-10 flex flex-wrap gap-8">
-              <div>
-                <p className="text-2xl font-black text-white">12K+</p>
-                <p className="text-sm text-blue-100">Students</p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-black text-white">70+</p>
-                <p className="text-sm text-blue-100">Courses</p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-black text-white">55%</p>
-                <p className="text-sm text-blue-100">Growth</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Visual */}
-          <div className="relative hidden h-[520px] lg:block">
-            {/* Main image placeholder */}
-            <div className="absolute right-5 top-10 h-[430px] w-[340px] rotate-2 overflow-hidden rounded-[35px] bg-gradient-to-br from-white to-blue-100 shadow-2xl">
-              <div className="flex h-full items-end justify-center">
-                <div className="mb-10 h-[330px] w-[230px] rounded-t-[120px] bg-gradient-to-b from-orange-200 to-orange-400" />
-              </div>
-            </div>
-
-            {/* Floating cards */}
-            <div className="absolute left-0 top-24 rotate-[-6deg] rounded-2xl bg-white p-4 shadow-xl">
-              <p className="text-xs font-medium text-slate-500">
-                Popular Course
-              </p>
-              <p className="mt-1 text-sm font-bold text-slate-900">
-                Web Development
-              </p>
-              <span className="mt-2 inline-block rounded-full bg-lime-200 px-3 py-1 text-xs font-bold">
-                4.9 ★
-              </span>
-            </div>
-
-            <div className="absolute bottom-16 right-0 rotate-[-4deg] rounded-2xl bg-white p-5 shadow-xl">
-              <p className="text-xs text-slate-500">Students enrolled</p>
-              <p className="mt-1 text-2xl font-black text-slate-900">12,000+</p>
-            </div>
-          </div>
-        </div>
+      {/* Man — bottom center */}
+      <div className="pointer-events-none absolute bottom-0 left-1/2 hidden -translate-x-1/2 md:block">
+        <Image
+          src="/images/man-hero.png"
+          alt=""
+          width={560}
+          height={720}
+          priority
+          sizes="(min-width: 1024px) 520px, 420px"
+          className="h-auto w-[420px] lg:w-[570px]"
+        />
       </div>
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
+        <h1
+          id="hero-heading"
+          className="text-heading-s text-balance text-white lg:text-heading-l"
+        >
+          {HERO.heading}
+        </h1>
+
+        <p className="text-body-l mt-6 max-w-2xl text-primary-200">
+          {HERO.subheading}
+        </p>
+
+        <HeroSearch className="mt-10 max-w-[680px]" />
+      </div>
+
+      {/* Floating cards — desktop only */}
+      <div className="relative z-20 hidden md:block">
+        {/* UI/UX Design */}
+        <HeroInfoCard className="absolute left-[27%] top-[12rem] w-[200px]">
+          <p className="text-label-m text-neutral-950">UI/UX Design</p>
+          <p className="text-body-xs mt-1 text-neutral-500">
+            200 Courses · 1000+ Students
+          </p>
+        </HeroInfoCard>
+
+        {/* Learning Progress */}
+        <HeroInfoCard className="absolute right-[24%] top-[12rem] w-[230px]">
+          <p className="text-label-m text-neutral-950">Learning Progress</p>
+          <p className="text-heading-s mt-2 text-neutral-950">55%</p>
+          <div
+            role="progressbar"
+            aria-valuenow={55}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label="Learning progress"
+            className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-neutral-100"
+          >
+            <div className="h-full w-[55%] rounded-full bg-secondary-500" />
+          </div>
+        </HeroInfoCard>
+
+        {/* Happy Students */}
+        <HeroInfoCard className="absolute left-[22%] top-[23rem] w-[260px]">
+          <p className="text-label-m text-neutral-950">Happy Students</p>
+          <p className="text-body-xs mt-1 flex items-center gap-1 text-neutral-500">
+            4.5 (240)
+            <Star
+              className="size-3.5 fill-secondary-500 text-secondary-500"
+              aria-hidden
+            />
+          </p>
+          <div className="mt-3 flex items-center">
+            {AVATARS.map((src, i) => (
+              <Image
+                key={src}
+                src={src}
+                alt=""
+                width={28}
+                height={28}
+                className="-ml-2 size-7 rounded-full border-2 border-white first:ml-0"
+                style={{ zIndex: AVATARS.length - i }}
+              />
+            ))}
+            <span className="text-body-xs -ml-2 grid size-7 place-items-center rounded-full border-2 border-white bg-secondary-400 text-neutral-950">
+              2K+
+            </span>
+          </div>
+        </HeroInfoCard>
+      </div>
+
+      {/* Reserve vertical space so the man image and circle are visible */}
+      <div aria-hidden className="h-[280px] md:h-[460px] lg:h-[560px]" />
     </section>
   );
 }
