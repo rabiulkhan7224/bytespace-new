@@ -49,11 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         satoshi.variable,
       )}
     >
-      <body className="flex min-h-full flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
