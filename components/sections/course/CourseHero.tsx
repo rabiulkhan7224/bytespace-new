@@ -7,7 +7,7 @@ type CourseHeroProps = { course: CourseDetail };
 export function CourseHero({ course }: CourseHeroProps) {
   return (
     <>
-      <div className="flex flex-wrap items-start justify-between gap-6">
+      {/* <div className="flex flex-wrap items-start justify-between gap-6">
         <div>
           <h1 className="text-heading-s text-balance text-white lg:text-heading-m">
             {course.title}
@@ -31,7 +31,7 @@ export function CourseHero({ course }: CourseHeroProps) {
           <Share2 className="size-4" aria-hidden />
           Share
         </button>
-      </div>
+      </div> */}
 
       {/* Meta chips */}
       <ul className="mt-5 flex flex-wrap gap-3">
