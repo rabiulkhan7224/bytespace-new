@@ -65,11 +65,11 @@ export function ManComposition() {
       {/* Lime spring — right of the man's shoulder */}
       <Image
         aria-hidden
-        src="/images/spring-lime-2.png"
+        src="/images/spring-lime-4.png"
         alt=""
         width={160}
         height={160}
-        className="pointer-events-none absolute right-[6%] top-[8%] z-20 w-[18%]"
+        className="pointer-events-none absolute right-[6%] top-[5%] z-20 w-[30%]"
       />
     </div>
   );

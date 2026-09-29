@@ -14,7 +14,7 @@ export function GirlComposition() {
   return (
     <div className="relative mx-auto aspect-[6/5] w-full max-w-[560px]">
       {/* Girl */}
-      <div className="pointer-events-none z-30 absolute bottom-0 left-[8%] z-10 h-[92%] w-[95%]">
+      <div className="pointer-events-none z-30 absolute bottom-0 left-[8%] z-10 h-[100%] w-[95%]">
         <Image
           src="/images/girl2.png"
           alt=""
@@ -46,11 +46,11 @@ export function GirlComposition() {
       {/* Lime spring — right of the girl */}
       <Image
         aria-hidden
-        src="/images/spring-lime-2.png"
+        src="/images/spring-lime-3.png"
         alt=""
         width={200}
         height={160}
-        className="pointer-events-none absolute right-[18%] top-[38%] z-20 w-[16%]"
+        className="pointer-events-none absolute right-[22%] top-[22%] z-30 w-[35%]"
       />
 
       {/* Happy Students */}
