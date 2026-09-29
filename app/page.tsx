@@ -1,8 +1,9 @@
 import { Hero } from "@/components/sections/Hero";
-import Navbar from "./../components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Courses } from "@/components/sections/Courses";
+import HomeCourses from "@/components/sections/homeCourses";
 import { Partners } from "@/components/sections/partner";
+import { Features } from "./../components/sections/Features";
+import { CreatorCta } from "./../components/sections/CreatorCta";
+import { Testimonials } from "./../components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -10,6 +11,10 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Partners />
+        <HomeCourses />
+        <Features />
+        <CreatorCta />
+        <Testimonials />
       </main>
     </>
   );
