@@ -33,10 +33,10 @@ export default function CourseDetailPage() {
           className="hero-grid pointer-events-none absolute inset-0"
         />
 
-        <div className="relative mx-auto max-w-7xl  px-6 py-16 lg:py-18">
+        <div className="relative mx-auto max-w-7xl lg:pt-30  px-6 py-16 lg:py-18">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <h1 className="text-heading-s text-balance text-white lg:text-heading-m">
+              <h1 className="text-heading-s text-balance text-white lg:text-heading-s">
                 {course.title}
               </h1>
               <p className="text-body-m mt-2 text-primary-100">
@@ -55,7 +55,7 @@ export default function CourseDetailPage() {
 
             <button
               type="button"
-              className="text-label-m inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-secondary-400 px-6 text-neutral-950 transition-colors hover:bg-secondary-300"
+              className="text-label-m inline-flex h-11 shrink-0 items-center gap-1 rounded-full bg-secondary-400 px-6 text-neutral-950 transition-colors hover:bg-secondary-300"
             >
               <Share2 className="size-4" aria-hidden />
               Share

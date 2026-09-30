@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 ">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-6 ">
         <Link href="/" aria-label="ByteSpace home">
           <Image
             src="/Header_Logo.png"
@@ -57,13 +57,13 @@ const Navbar = () => {
             href="/login"
             className="text-label-m rounded-full px-5 py-2.5 text-white transition-colors hover:bg-white/10"
           >
-            Login
+            Sign In
           </Link>
           <Link
             href="/register"
-            className="text-label-m rounded-full bg-secondary-400 px-5 py-2.5 font-medium text-neutral-950 transition-colors hover:bg-secondary-300"
+            className="text-label-m rounded-full  px-5 py-2.5 font-medium text-white transition-colors hover:bg-white/10 "
           >
-            Register
+            Join Us
           </Link>
         </div>
 
@@ -103,14 +103,14 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="text-label-m flex-1 rounded-full border border-white/20 px-5 py-2 text-center text-white"
             >
-              Login
+              Sign In
             </Link>
             <Link
               href="/register"
               onClick={() => setIsOpen(false)}
-              className="text-label-m flex-1 rounded-full bg-secondary-400 px-5 py-2 text-center font-medium text-neutral-950"
+              className="text-label-m flex-1 rounded-full  px-5 py-2 text-center font-medium text-neutral-950"
             >
-              Register
+              Join Us
             </Link>
           </div>
         </div>
